@@ -1,0 +1,35 @@
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="showUserModalLabel"><b><%= params[:action] %> book</b></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="showBookdetail">
+        <div class="modal-body" style="background-color:black; color:white">
+          <% if params[:action] == 'show' %>
+            <div>
+              <center>
+                  <p>
+                    <h4>
+                      <strong>Title:</strong>
+                      <b><%= book.title %></b>
+                    </h4>
+                  </p>
+                  <p>
+                    <h4>
+                      <strong>Price:</strong>
+                      <b><%= book.price %></b>
+                    </h4>
+                  </p>
+              </center>
+            </div>
+          <% else %>
+            <%= render "form", book: @book %>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id ="pk" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

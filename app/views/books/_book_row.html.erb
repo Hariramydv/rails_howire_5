@@ -1,0 +1,7 @@
+<tr id="bookRow_<%= book.id %>">
+    <td><%= book.title %></td>                            
+    <td><%= book.price %></td>
+    <td  ><%= link_to 'Show', book, class:'btn btn-info',data: { remote: true } %></td>
+    <td><%= link_to 'Edit', edit_book_path(book), class:'btn btn-success', data: { remote: true } %></td>
+    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?', remote: true },  class:'btn btn-danger' %></td>
+</tr>

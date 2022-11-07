@@ -1,0 +1,7 @@
+<% if @book.errors.any? %>
+  $("#errorField").html(" <%= j render 'error', book: @book %> ");
+<% else %>
+  $("#showUserModal").modal('hide');
+  $("#booksTable").prepend(" <%= j render 'book_row', book: @book %> ");
+  $("#pk").click();
+<% end %>

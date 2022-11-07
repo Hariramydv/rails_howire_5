@@ -1,0 +1,26 @@
+<%= form_with(model: book, local: false) do |form| %>
+  <div class="modal-body" style="background-color:black;color:white">
+    <div id='errorField'>
+    </div>
+    
+    <div class="field">
+      <h5>
+       <%= form.label :title %>
+       <%= form.text_field :title %>
+      </h5>
+    </div>
+
+    <div class="field">
+      <h5>
+        <%= form.label :price %>
+        <%= form.number_field :price %>
+      </h5>
+    </div>
+  </div>
+  <div class="modal-footer">
+     <%# <button type="button" id ="pk" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> %>
+     <div class="actions">
+      <%= form.submit class:"btn btn-warning"%>
+    </div>
+  </div> 
+<% end %>
